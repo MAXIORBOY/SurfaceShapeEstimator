@@ -3,28 +3,32 @@
 ## Important: If you use travel time, you have to make sure that the same speed was maintained during all travels and that the connection lines are straight.
 
 ## Implementation: To solve this problem the script ```main.py``` was created, which contains a class ```ShapeEstimator```.  
-```__init__(self, connections_file_name, duplicate_data=False, point_details_file_name=None, color_definitions_file=None, optimized_points_file=None)```
-
+```__init__(self, connections_file_name, duplicate_data=False, point_details_file_name=None, color_definitions_file=None, optimized_points_file=None)```  
+<br>
 * ```connections_file_name``` - (str) full name of the file which stores data about connections. The file must be in ```.csv``` format. The file must have exactly 3 columns, named as follows: ```departure_point```, ```arrival_point```, ```measurement_value```. The ```flights.csv``` file is a valid example.
  
 ```connections_file``` header:  
 departure_point | arrival_point | measurement_value  
-----------------|---------------|-------------------  
-  
+----------------|---------------|-------------------
+<br>
+
 * ```duplicate_data``` - (bool) (...) .Default = False  
-  
+
+
 * ```point_details_file_name``` - (str) full name of the file which stores additional informations about points. The file must be in ```.csv``` format. The file may have any number of columns, but must have a column ```point``` which is a point codename from the ```connections file```.  The ```airports.csv``` file is a valid example. Default = None
 
 ```point_details_file``` header:  
 point | (...)
-------|-------  
+------|------- 
+<br>
   
-* ```color_definitions_file``` - (str) full name of the file which describes a method to color the points. The file must be in ```.csv``` format. The file must have exactly 2 columns. The first column name must come from the one of the ```points_details_file``` column names. The second column name must be named as ```color```. In each row, you can choose any ```CSS``` color, declared by it's name or hex. Declaring ```color_definitions_file``` has no use if the ```point_details_file``` is not declared. The ```color_definitions.csv``` file is a valid example. Default = None
+* ```color_definitions_file``` - (str) full name of the file which describes a method to color the points. The file must be in ```.csv``` format. The file must have exactly 2 columns. The first column name must come from the one of the ```points_details_file``` column names. The second column name must be named as ```color```. In each row, you can choose any ```CSS``` color, declared by it's name or hex. Declaring ```color_definitions_file``` has no use if the ```point_details_file``` is not declared. The ```color_definitions.csv``` file is a valid example. Default = None  
+<br>
 
 ```color_definitions_file``` header:  
 <column from ```points_detail_file```> | color  
 ---------------------------------------|-------  
-
+<br>
 
 * ```optimized_points_file``` - (str) full name of the file which . The file must be in ```.pickle``` format. Default = None. (...)  
 
