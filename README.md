@@ -1,6 +1,6 @@
 # Surface Shape Estimator is a program which allows to estimate a shape of the surface based solely on a collection of connections between two points on that surface. Data about a single connection store 3 informations: code names of a first and second point and Euclidean distance OR travel time between those points.
 
-## Important: If you use a travel time as a measurement, you have to make sure that the same speed was maintained during all travels and that the connection lines are straight.
+> :warning: **If you use a travel time as a measurement**: You have to make sure that the same speed was maintained during all travels and that the connection lines are straight.
 
 ## Implementation: To solve this problem the script ```main.py``` was created, which contains a class ```ShapeEstimator```.  
 ```ShapeEstimator.__init__(self, connections_file_name, duplicate_data=False, point_details_file_name=None, color_definitions_file=None, optimized_points_file=None)```  
@@ -30,6 +30,9 @@
 <br>
 
 * ```optimized_points_file``` - (str) full name of the file which . The file must be in ```.pickle``` format. Default = None. (...)  
+
+## Artificial generator:
+(...)  
 
 ## Earth example:
 In order to estimate a shape of the surface of Earth, at first 634 airports were carefully selected from all around the globe. You can find them in the ```airports.csv``` file. Following this we have to create as many connections as possible from the collected airports. Those data were collected from the site www.wego.com/schedules/ with a help of a web-scrapping script, 9432 connections were found and stored in the ```flights.csv``` file. (...)
