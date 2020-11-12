@@ -5,7 +5,10 @@
 ## Implementation: To solve this problem the script ```main.py``` was created, which contains a class ```ShapeEstimator```.  
 ```__init__(self, connections_file_name, duplicate_data=False, point_details_file_name=None, color_definitions_file=None, optimized_points_file=None)```
 
-* ```connections_file_name``` - (str) full name of the file which stores data about connections. The file must be in ```.csv``` format. The file must have exactly 3 columns, named as follows: ```departure_point```, ```arrival_point```, ```measurement_value```  
+* ```connections_file_name``` - (str) full name of the file which stores data about connections. The file must be in ```.csv``` format. The file must have exactly 3 columns, named as follows: 
+ 
+departure_point | arrival_point | measurement_value  
+----------------|---------------|-------------------
 
 * ```duplicate_data``` - (bool) (...) .Default = False  
 
