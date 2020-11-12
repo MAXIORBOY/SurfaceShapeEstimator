@@ -6,8 +6,8 @@ import pickle
 
 
 class ShapeEstimator:
-    def __init__(self, file_name, duplicate_data=False, point_details_file_name=None, color_definitions_file=None, optimized_points_file=None):
-        self.data = self.load_data(file_name)
+    def __init__(self, connections_file_name, duplicate_data=False, point_details_file_name=None, color_definitions_file=None, optimized_points_file=None):
+        self.data = self.load_data(connections_file_name)
         self.duplicate_data = duplicate_data
         if self.duplicate_data:
             self.data = self.data_duplicator()
