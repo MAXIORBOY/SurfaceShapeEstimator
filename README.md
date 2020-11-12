@@ -40,9 +40,9 @@ Because we are going to use time measurements between points. In order to do tha
 * Why did airports were carefully selected? Couldn't we just use all of them?   
 There are two reasons. First we have to maintain the conditions.(.....)
 
-* What is an IATA code?
+* What is an IATA code?   
 An IATA (International Air Transport Association) code is a 3 letter geocode which designates airports and metropolitan areas (if a city has more than one airport)
-For example:
+For example:  
   * 'ATL' is a code of: "Hartsfield–Jackson Atlanta International Airport",
   * 'CGK' is a code of: "Soekarno–Hatta International Airport",
   * 'PAR' is a code of the Paris city.
@@ -51,7 +51,7 @@ For example:
 * Why did you use www.wego.com website?  
 This website allows to automatize a process of the web-scrapping. To collect travel time between two airports (...)   www.wego.com/schedules/XXX/YYY/  were XXX and YYY are IATA codes. (...)
 
-## Project's origin:
+## Project's origin:  
 It was a college project which I done by myself. After some time I created a GitHub account and I decided to add this project as a new repository. However I was not satisfied about code quality and visualization method, so I decided to "remaster" that project. I simplified and refractored all the code, changed visualization backend from ```matplotlib``` to ```plotly``` and added addidtional informations about airports in Earth example.
 
 ## Technology:   
