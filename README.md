@@ -5,17 +5,23 @@
 ## Implementation: To solve this problem the script ```main.py``` was created, which contains a class ```ShapeEstimator```.  
 ```__init__(self, connections_file_name, duplicate_data=False, point_details_file_name=None, color_definitions_file=None, optimized_points_file=None)```
 
-* ```connections_file_name``` - (str) full name of the file which stores data about connections. The file must be in ```.csv``` format. The file must have exactly 3 columns, named as follows: 
+* ```connections_file_name``` - (str) full name of the file which stores data about connections. The file must be in ```.csv``` format. The file must have exactly 3 columns, named as follows: ```departure_point```, ```arrival_point```, ```measurement_value```
  
+```connections_file``` header:  
 departure_point | arrival_point | measurement_value  
 ----------------|---------------|-------------------
 
 * ```duplicate_data``` - (bool) (...) .Default = False  
 
-* ```point_details_file_name``` - (str) full name of the file which stores additional informations about points. The file must be in ```.csv``` format. The file may have any number of columns, but must have a column ```point``` which is a point codename from the ```connections file```. Default = None  
+* ```point_details_file_name``` - (str) full name of the file which stores additional informations about points. The file must be in ```.csv``` format. The file may have any number of columns, but must have a column ```point``` which is a point codename from the ```connections file```. Default = None
+
+```point_details_file``` header:  
+point | (...)
+------|-------
 
 * ```color_definitions_file``` - (str) full name of the file which describes a method to color the points. The file must be in ```.csv``` format. The file must have exactly 2 columns. The first column name must come from the one of the ```points_details_file``` column names. The second column name must be named as ```color```. In each row, you can choose any ```CSS``` color, declared by it's name or hex. Declaring ```color_definitions_file``` has no use if the ```point_details_file``` is not declared. Default = None
 
+```color_definitions_file``` header:  
 <column from ```points_detail_file```> | color  
 ---------------------------------------|-------
 
