@@ -37,7 +37,7 @@ In order to estimate a shape of the surface of Earth, at first 634 airports were
 * Why airports?   
 Because we are going to use time measurements between points. In order to do that our routes have to be as straight as possible and roughly the same speed has to be maintained on all routes. Air flights sufficiently enough fullfill our conditions.
 
-* Why did airports were carefully selected? Couldn't we just use all of them?
+* Why did airports were carefully selected? Couldn't we just use all of them?   
 There are two reasons. First we have to maintain the conditions.(.....)
 
 * What is an IATA code?
