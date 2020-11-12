@@ -35,7 +35,7 @@
 In order to estimate a shape of the surface of Earth, at first 634 airports were carefully selected from all around the globe. You can find them in the ```airports.csv``` file. Following this we have to create as many connections as possible from the collected airports. Those data were collected from the site www.wego.com/schedules/ with a help of a web-scrapping script, 9432 connections were found and stored in the ```flights.csv``` file. (...)
 
 * Why airports?   
-Because we are going to use time measurements between points. In order to do that our routes have to be as straight as possible and roughly the same speed has to be maintained on all routes. Air flights sufficiently enough fullfill our conditions.
+Because we are going to use time measurements between points. In order to do that our routes have to be as straight as possible and roughly the same speed has to be maintained on all routes. Air flights sufficiently enough fullfill those conditions.
 
 * Why did airports were carefully selected? Couldn't we just use all of them?   
 There are two reasons. First we have to maintain the conditions.(.....)
