@@ -14,7 +14,7 @@
   ----------------|---------------|-------------------
 <br>
 
-* ```duplicate_data``` - (bool) duplicate the data from the ```connections_file```. Duplicating the data usually yields better results, especially if you have many points with not many connections and / or you have low amount of connections overall. Duplicating the data causes a considerable increase of optimization time. Duplication of data shall be discouraged if your collection of connections does not me previously mention situation. Default = False  
+* ```duplicate_data``` - (bool) duplicate the data from the ```connections_file```. Duplicating the data usually yields better results, especially if you have many points with not many connections and / or you have a low amount of connections overall. Duplicating the data causes a considerable increase of optimization time. Duplication of data shall be discouraged if your collection of connections does not meet the previously mention situations. Default = False  
 
 
 * ```point_details_file_name``` - (str) full name of the file which stores additional informations about points. The file must be in ```.csv``` format. The file may have any number of columns, but must have a column ```point``` which is a point codename from the ```connections file```.  The ```airports.csv``` file is a valid example. Default = None
