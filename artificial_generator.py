@@ -4,16 +4,16 @@ import numpy as np
 
 
 class ArtificialGenerator:
-    def __init__(self, shape_name, part_of_all_flights=0.05, points=500, data_noise_parameter=0.0):
+    def __init__(self, shape_name, points=500, part_of_all_connections=0.05, data_noise_parameter=0.0):
         self.shape_name = shape_name
         self.points = points
         self.data_noise_parameter = data_noise_parameter
         self.points_dictionary = self.generate_shape_points()
-        self.flights = self.calculate_number_of_flights(part_of_all_flights)
+        self.flights = self.calculate_number_of_flights(part_of_all_connections)
         self.connections_matrix = self.create_connections_matrix()
 
-    def calculate_number_of_flights(self, part_of_all_flights):
-        return int(part_of_all_flights * (self.points * (self.points - 1) / 2))
+    def calculate_number_of_flights(self, part_of_all_connections):
+        return int(part_of_all_connections * (self.points * (self.points - 1) / 2))
 
     def create_connections_matrix(self):
         return np.array([[i != j for j in range(self.points)] for i in range(self.points)])
