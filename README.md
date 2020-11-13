@@ -14,7 +14,7 @@
   ----------------|---------------|-------------------
 <br>
 
-* ```duplicate_data``` - (bool) (...) .Default = False  
+* ```duplicate_data``` - (bool) duplicate the data from the ```connections_file```. Duplicating the data usually yields better results, especially if you have many points with not many connections and / or you have low amount of connections overall. Duplicating the data causes a considerable increase of optimization time. Duplication of data shall be discouraged if your collection of connections does not me previously mention situation. Default = False  
 
 
 * ```point_details_file_name``` - (str) full name of the file which stores additional informations about points. The file must be in ```.csv``` format. The file may have any number of columns, but must have a column ```point``` which is a point codename from the ```connections file```.  The ```airports.csv``` file is a valid example. Default = None
@@ -37,7 +37,7 @@
 (...)  
 
 ## Earth example:
-In order to estimate a shape of the surface of Earth, at first 634 airports were carefully selected from all around the globe. You can find them in the ```airports.csv``` file. Following this we have to create as many connections as possible from the collected airports. Those data were collected from the site www.wego.com/schedules/ with a help of a web-scrapping script, 9432 connections were found and stored in the ```flights.csv``` file. (...)
+In order to estimate a shape of the surface of Earth, at first 634 airports were carefully selected from all around the globe. You can find them in the ```airports.csv``` file. Following this we have to create as many connections as possible from the collected airports. Those data were collected from the site www.wego.com/schedules/ with a help of a web-scrapping script, 9432 (which is around 4.7% of all possible combinations of flights.)connections were found and stored in the ```flights.csv``` file. (...)
 
 * Why airports?   
 Because we are going to use time measurements between points. In order to do that our routes have to be as straight as possible and roughly the same speed has to be maintained on all routes. Air flights sufficiently enough fullfill those conditions.
