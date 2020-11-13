@@ -33,17 +33,31 @@
 
 * ```optimized_points_file``` - (str) full name of the file which stores already optimizied coordinates (xyz) of each point and some additional informations. The file must be in ```.pickle``` format. (...) The ```earth.pickle``` file is a valid example. Default = None.
 
-## Artificial generator:
-(...)  
+## Artificial generator:  
+(...), the script ```artificial_generator.py``` was created, which contains a class ```ArtificialGenerator```.  
+```Artificial_generator.__init__(self, shape_name, points=500, part_of_all_connections=0.05, data_noise_parameter=0.0)```  
+
+* ```shape_name``` - (str) Specifies the shape of the surface. Must be one of the following: 'cube', 'sphere', 'disc', 'cylinder', 'line'  
+
+* ```points``` - (int) Number of points to be generated. It must be a number above or equal 250. Default=500  
+
+* ```part_of_all_connections``` - (float) Number of all possible connections is expressed by the formula:  
+  
+   ```(points * (points - 1)) / 2```    
+This parameter specifies how large part of the whole we want to generate. It must be a value from the range <0.01; 1>, where 0.05 means 5% of the whole. Default=0.05  
+
+* ```data_noise_parameter``` - (float) To simulate real-world data collection, for each connection we can modify the calculated ```measurement_value``` according to the formula:  
+(...) 
+It must be a number from the range <0;1>. Default=0.0
 
 ## Earth example:
-In order to estimate a shape of the surface of Earth, at first 634 airports were carefully selected from all around the globe. You can find them in the ```airports.csv``` file. Following this we have to create as many connections as possible from the collected airports. Those data were collected from the site www.wego.com/schedules/ with a help of a web-scrapping script, 9432 (which is around 4.7% of all possible combinations of flights.)connections were found and stored in the ```flights.csv``` file. (...)
+In order to estimate a shape of the surface of Earth, at first 634 airports were carefully selected from all around the globe. You can find them in the ```airports.csv``` file. Following this we have to create as many connections as possible from the collected airports. Those data were collected from the site www.wego.com/schedules/ with a help of a web-scrapping script. In total, 9432 (which is around 4.7% of all possible combinations of flights) connections were found and stored in the ```flights.csv``` file.
 
 * Why airports?   
 Because we are going to use time measurements between points. In order to do that our routes have to be as straight as possible and roughly the same speed has to be maintained on all routes. Air flights sufficiently enough fullfill those conditions.
 
 * Why did airports were carefully selected? Couldn't we just use all of them?   
-There are two reasons. First we have to maintain the conditions.(.....)
+Selected airports There are two reasons. First we have to maintain the conditions. We need airports, on which large (roughly similar to each other) airplanes land. Second (...)
 
 * What is an IATA code?   
 An IATA (International Air Transport Association) code is a 3 letter geocode which designates airports and metropolitan areas (if a city has more than one airport)
