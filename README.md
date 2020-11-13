@@ -31,7 +31,7 @@
   ---------------------------------------|-------  
 <br>
 
-* ```optimized_points_file``` - (str) full name of the file which stores already optimizied coordinates (xyz) of each point and some additional informations. The file must be in ```.pickle``` format. After each optimization process a new ```.pickle``` file is generated, which saves the results. Passing a ```.pickle``` file as parameter skips the whole optimization process which saves time. If a ```pickle``` file is passed as the parameter, the value of the ```duplicate_data``` parameter is irrelevant, because that value is saved in the file. The ```earth.pickle``` file is a valid example. Default = None.
+* ```optimized_points_file``` - (str) full name of the file which stores already optimized coordinates (xyz) of each point and some additional informations. The file must be in ```.pickle``` format. After each optimization process a new ```.pickle``` file is generated, which saves the results. Passing a ```.pickle``` file as parameter skips the whole optimization process which saves time and allows to load previously calculated results. If a ```.pickle``` file is passed as the parameter, the value of the ```duplicate_data``` parameter is irrelevant, because that value is saved in the file. By default the results will be saved in the ```optimized.pickle``` file. The ```earth.pickle``` file is a valid example. Default = None.
 
 ## Artificial generator:  
 (...), the script ```artificial_generator.py``` was created, which contains a class ```ArtificialGenerator```.  
