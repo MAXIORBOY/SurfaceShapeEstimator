@@ -1,4 +1,4 @@
-# Surface Shape Estimator is a program which allows to estimate a shape of the surface based solely on a collection of connections between two points on that surface. Data about a single connection store 3 informations: code names of a first and second point and Euclidean distance OR travel time between those points.
+# Surface Shape Estimator is a program which allows to estimate a shape of the surface based solely on a collection of connections between two points on that surface. Data about a single connection store 3 information: code names of a first and second point and Euclidean distance OR travel time between those points.
 
 > :warning: **If you use a travel time as a measurement**: You have to make sure that the same speed was maintained during all travels and that the connection lines are straight.  
 <br>
@@ -17,7 +17,7 @@
 * ```duplicate_data``` - (bool) duplicate the data from the ```connections_file```. Duplicating the data usually yields better results, especially if you have many points with not many connections and / or you have a low amount of connections overall. Duplicating the data causes a considerable increase of optimization time. Duplication of data shall be discouraged if your collection of connections does not meet the previously mention situations. Default = False  
 
 
-* ```point_details_file_name``` - (str) full name of the file which stores additional informations about points. The file must be in ```.csv``` format. The file may have any number of columns, but must have a column ```point``` which is a point codename from the ```connections file```.  The ```airports.csv``` file is a valid example. Default = None
+* ```point_details_file_name``` - (str) full name of the file which stores additional information about points. The file must be in ```.csv``` format. The file may have any number of columns, but must have a column ```point``` which is a point codename from the ```connections file```.  The ```airports.csv``` file is a valid example. Default = None
 
   ```point_details_file``` header:  
   point | <column_name 1> | ... | <column_name n>
@@ -31,7 +31,7 @@
   ---------------------------------------|-------  
 <br>
 
-* ```optimized_points_file``` - (str) full name of the file which stores already optimized coordinates (xyz) of each point and some additional informations. The file must be in ```.pickle``` format. After each optimization process a new ```.pickle``` file is generated, which saves the results. Passing a ```.pickle``` file as parameter skips the whole optimization process which saves time and allows to load previously calculated results. If a ```.pickle``` file is passed as the parameter, the value of the ```duplicate_data``` parameter is irrelevant, because that value is saved in the file. By default the results will be saved in the ```optimized.pickle``` file. The ```earth.pickle``` file is a valid example. Default = None.
+* ```optimized_points_file``` - (str) full name of the file which stores already optimized coordinates (xyz) of each point and some additional information. The file must be in ```.pickle``` format. After each optimization process a new ```.pickle``` file is generated, which saves the results. Passing a ```.pickle``` file as parameter skips the whole optimization process which saves time and allows to load previously calculated results. If a ```.pickle``` file is passed as the parameter, the value of the ```duplicate_data``` parameter is irrelevant, because that value is saved in the file. By default the results will be saved in the ```optimized.pickle``` file. The ```earth.pickle``` file is a valid example. Default = None.
 
 ## Artificial generator:  
 (...), the script ```artificial_generator.py``` was created, which contains a class ```ArtificialGenerator```.  
@@ -54,10 +54,10 @@ It must be a number from the range <0;1>. Default = 0.0
 In order to estimate a shape of the surface of Earth, at first 634 airports were carefully selected from all around the globe. You can find them in the ```airports.csv``` file. Following this we have to create as many connections as possible from the collected airports. Those data were collected from the site www.wego.com/schedules/ with a help of a web-scrapping script. In total, 9432 (which is around 4.7% of all possible combinations of flights) connections were found and stored in the ```flights.csv``` file.
 
 * Why airports?   
-Because we are going to use time measurements between points. In order to do that our routes have to be as straight as possible and roughly the same speed has to be maintained on all routes. Air flights sufficiently enough fullfill those conditions.
+Because we are going to use time measurements between points. In order to do that our routes have to be as straight as possible and roughly the same speed has to be maintained on all routes. Air flights sufficiently enough fulfill those conditions.
 
 * Why did airports were carefully selected? Couldn't we just use all of them?   
-Selected airports There are two reasons. First we have to maintain the conditions. We need airports, on which large (roughly similar to each other) airplanes land. Second (...)
+Selected airports (...) There are two reasons. First we have to maintain the conditions. We need airports, on which large (roughly similar to each other) airplanes land. Second (...)
 
 * What is an IATA code?   
 An IATA (International Air Transport Association) code is a 3 letter geocode which designates airports and metropolitan areas (if a city has more than one airport)
@@ -71,7 +71,7 @@ For example:
 This website allows to automatize a process of the web-scrapping. To collect travel time between two airports (...)   www.wego.com/schedules/XXX/YYY/  were XXX and YYY are IATA codes. (...)
 
 ## Project's origin:  
-It was a college project which I done by myself. After some time I created a GitHub account and I decided to add this project as a new repository. However I was not satisfied about a code quality and a visualization method, so I decided to "remaster" that project. I simplified and refactored all the code, changed visualization backend from ```matplotlib``` to ```plotly``` and added addidtional informations about airports in Earth example.
+It was a college project which I done by myself. After some time I created a GitHub account and I decided to add this project as a new repository. However I was not satisfied about a code quality and a visualization method, so I decided to "remaster" that project. I simplified and refactored all the code, changed visualization backend from ```matplotlib``` to ```plotly``` and added additional information about airports in Earth example.
 
 ## Technology:   
 * ```Python``` 3.8  
