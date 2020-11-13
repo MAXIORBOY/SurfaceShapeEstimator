@@ -31,7 +31,7 @@
   ---------------------------------------|-------  
 <br>
 
-* ```optimized_points_file``` - (str) full name of the file which . The file must be in ```.pickle``` format. Default = None. (...)  
+* ```optimized_points_file``` - (str) full name of the file which stores already optimizied coordinates (xyz) of each point and some additional infomrations. The file must be in ```.pickle``` format. (...) The ```earth.pickle``` file is a valid example. Default = None.
 
 ## Artificial generator:
 (...)  
