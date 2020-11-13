@@ -31,7 +31,7 @@
   ---------------------------------------|-------  
 <br>
 
-* ```optimized_points_file``` - (str) full name of the file which stores already optimizied coordinates (xyz) of each point and some additional informations. The file must be in ```.pickle``` format. (...) The ```earth.pickle``` file is a valid example. Default = None.
+* ```optimized_points_file``` - (str) full name of the file which stores already optimizied coordinates (xyz) of each point and some additional informations. The file must be in ```.pickle``` format. After each optimization process a new ```.pickle``` file is generated. Passing a ```.pickle``` file as parameter skips the whole optimization process which saves time and allows to save the results. If a ```pickle``` file is passed as the parameter, the value of the ```duplicate_data``` parameter is irrelevant, because that value is saved in the file. The ```earth.pickle``` file is a valid example. Default = None.
 
 ## Artificial generator:  
 (...), the script ```artificial_generator.py``` was created, which contains a class ```ArtificialGenerator```.  
@@ -39,16 +39,16 @@
 
 * ```shape_name``` - (str) Specifies the shape of the surface. Must be one of the following: 'cube', 'sphere', 'disc', 'cylinder', 'line'  
 
-* ```points``` - (int) Number of points to be generated. It must be a number above or equal 250. Default=500  
+* ```points``` - (int) Number of points to be generated. It must be a number above or equal 250. Default = 500  
 
 * ```part_of_all_connections``` - (float) Number of all possible connections is expressed by the formula:  
   
    ```(points * (points - 1)) / 2```    
-This parameter specifies how large part of the whole we want to generate. It must be a value from the range <0.01; 1>, where 0.05 means 5% of the whole. Default=0.05  
+This parameter specifies how large part of the whole we want to generate. It must be a value from the range <0.01; 1>, where 0.05 means 5% of the whole. Default = 0.05  
 
 * ```data_noise_parameter``` - (float) To simulate real-world data collection, for each connection we can modify the calculated ```measurement_value``` according to the formula:  
 (...) 
-It must be a number from the range <0;1>. Default=0.0
+It must be a number from the range <0;1>. Default = 0.0
 
 ## Earth example:
 In order to estimate a shape of the surface of Earth, at first 634 airports were carefully selected from all around the globe. You can find them in the ```airports.csv``` file. Following this we have to create as many connections as possible from the collected airports. Those data were collected from the site www.wego.com/schedules/ with a help of a web-scrapping script. In total, 9432 (which is around 4.7% of all possible combinations of flights) connections were found and stored in the ```flights.csv``` file.
