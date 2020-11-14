@@ -46,7 +46,7 @@
    ```(points * (points - 1)) / 2```    
 This parameter specifies how large part of the whole we want to generate. It must be a value from the range <0.01; 1>, where 0.05 means 5% of the whole. Default = 0.05  
 
-* ```data_noise_parameter``` - (float) To simulate real-world data collection, for each connection we can modify the calculated ```measurement_value``` by adding some noise into the data. The actual ```measurement_value``` is randomized by up to +/- (100 * data_noise_parameter)% around the calculated ```measurement_value```. It must be a number from the range <0;1>. Default = 0.0
+* ```data_noise_parameter``` - (float) To simulate real-world data collection, for each connection we can modify the calculated ```measurement_value``` by adding some noise into the data. The actual ```measurement_value``` is randomized by up to +/- (100 * ```data_noise_parameter```)% around the calculated ```measurement_value```. It must be a number from the range <0;1>. Default = 0.0
 
 ## Earth example:
 In order to estimate a shape of the surface of Earth, at first 634 airports were carefully selected from all around the globe. You can find them in the ```airports.csv``` file. Following this we have to create as many connections as possible from the collected airports. Those data were collected from the site www.wego.com/schedules/ with a help of a web-scrapping script. In total, 9432 (which is around 4.7% of all possible combinations of flights) connections were found and stored in the ```flights.csv``` file.
