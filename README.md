@@ -52,8 +52,8 @@
 &nbsp;7. Shuffle the data from the ```connections_file```.  
 &nbsp;8. Make a copy of current points coordinates.  
 &nbsp;9. Repeat for each connection in ```connections_file```:   
-&nbsp;&nbsp;10. Calculate the current Euclidean distance between two points.    
-&nbsp;&nbsp;11. Create a vector joining ```departure_point``` and ```arrival_point```.   
+&nbsp;&emsp;10. Calculate the current Euclidean distance between two points.    
+&nbsp;&emsp;11. Create a vector joining ```departure_point``` and ```arrival_point```.   
 (...)  
 &nbsp;12. i += 1.   
 13. Save the optimization results into the ```optimized_points_file``` file.  
