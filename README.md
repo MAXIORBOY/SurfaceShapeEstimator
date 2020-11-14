@@ -46,12 +46,11 @@
 &nbsp;8. Make a copy of current points coordinates.
 &nbsp;9. Repeat for each connection in ```connections_file```:  
 &nbsp;&nbsp;10. Calculate the current Euclidean distance between two points.  
-&nbsp;&nbsp;11. Create a vector joining ```departure_point``` and ```arrival_point```.
+&nbsp;&nbsp;11. Create a vector joining ```departure_point``` and ```arrival_point```.  
 (...)
 
-xx. 
-xx. Save the optimization results into the ```.pickle``` file.
-xx. Show the optimization statistics.
+xx. Save the optimization results into the ```.pickle``` file.  
+xx. Show the optimization statistics.  
 
 
 ## Artificial generator:  
