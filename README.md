@@ -32,16 +32,23 @@
   ---------------------------------------|-------  
 <br>
 
-* ```optimized_points_file``` - (str) full name of the file which stores already optimized coordinates (xyz) of each point and some additional information. The file must be in ```.pickle``` format. After each optimization process a new ```.pickle``` file is generated, which saves the results. Passing a ```.pickle``` file as parameter skips the whole optimization process which saves time and allows to load previously calculated results. If a ```.pickle``` file is passed as the parameter, the value of the ```duplicate_data``` parameter is irrelevant, because that value is saved in the file. By default the results will be saved in the ```optimized.pickle``` file. The ```earth.pickle``` file is a valid example. Default = None.
+* ```optimized_points_file``` - (str) full name of the file which stores already optimized coordinates (xyz) of each point and some additional information. The file must be in ```.pickle``` format. After each optimization process a new ```.pickle``` file is generated, which saves the results. Passing a ```.pickle``` file as a parameter skips the whole optimization process which saves time and allows to load previously calculated results. If a ```.pickle``` file is passed as the parameter, the value of the ```duplicate_data``` parameter is irrelevant, because that value is saved in the file. By default the results will be saved in the ```optimized.pickle``` file. The ```earth.pickle``` file is a valid example. Default = None.
 
 
 ## Optimization Algorithm:
+### Optimization parameters:   
+* ```mod``` - (float) (...). Set to 0.5.  
+* ```iterations``` - (int) A maximum number of iterations. Set to 250.  
+* ```tol``` - (float) a tolerance value. If the ```mod``` value falls below the ```tol``` value, the optimization process will stop. Set to 0.001.  
+* ```optimized_points_file_name``` - (str) A name of the ```.pickle``` file which will be created after the optimization. It will contain the optimized data. Set to 'optimized_points.pickle'  
+
+### Algorithm:  
 1. Find a point with the largest number of connections.
 2. Create a set of unique points from ```connections_file```.  
 3. Place all of the points (from the set) at random on 3-D space. 
 4. Calculate errors (cumulative, average, max)
 5. i = 0.  
-6. Repeat if i < 250:  
+6. Repeat if i < ```iterations```:  
 &nbsp;7. Shuffle the data from the ```connections_file```.  
 &nbsp;8. Make a copy of current points coordinates.  
 &nbsp;9. Repeat for each connection in ```connections_file```:   
@@ -49,8 +56,8 @@
 &nbsp;&nbsp;11. Create a vector joining ```departure_point``` and ```arrival_point```.  
 (...)
 
-xx. Save the optimization results into the ```.pickle``` file.  
-xx. Show the optimization statistics.  
+12. Save the optimization results into the ```optimized_points_file``` file.  
+13. Show the optimization statistics.  
 
 
 ## Artificial generator:  
