@@ -83,7 +83,7 @@ In order to estimate a shape of the surface of Earth, at first 634 airports were
 Because we are going to use time measurements between points. In order to do that our routes have to be as straight as possible and roughly the same speed has to be maintained on all routes. Air flights sufficiently enough fulfill those conditions.
 
 * Why did airports were carefully selected? Couldn't we just use all of them?   
-Selected airports are in a significant majority the international airports. This type of the airports gives the biggest chances of fulfilling the previously mentioned conditions. First, large (roughly similar to each other) planes land on those airports. Second, this type of airports offers a large number of connections, which significantly improve the data quality. Of course in this data set, there are smaller, more local airports. They come from low population density areas such as: Oceania, southern part of the South America, north Canada or north Russia.
+Selected airports are in a significant majority the international airports. This type of the airports gives the biggest chances of fulfilling the previously mentioned conditions. First, large (roughly similar to each other) planes land on those airports. Second, this type of airports offers a large number of connections, which significantly improves the data quality. Of course in this data set, there are smaller, more local airports. They come from low population density areas such as: Oceania, southern part of the South America, north Canada or north Russia.
 
 * What is an IATA code?   
 An IATA (International Air Transport Association) code is a 3 letter geocode which designates airports and metropolitan areas (if a city has more than one airport)
