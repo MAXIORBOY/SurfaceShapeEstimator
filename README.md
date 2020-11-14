@@ -53,11 +53,11 @@
 &nbsp;8. Make a copy of current points coordinates.  
 &nbsp;9. Repeat for each connection in ```connections_file```:   
 &nbsp;&nbsp;10. Calculate the current Euclidean distance between two points.    
-&nbsp;&nbsp;11. Create a vector joining ```departure_point``` and ```arrival_point```.  
-(...)
-
-12. Save the optimization results into the ```optimized_points_file``` file.  
-13. Show the optimization statistics.  
+&nbsp;&nbsp;11. Create a vector joining ```departure_point``` and ```arrival_point```.   
+(...)  
+&nbsp;12. i += 1.   
+13. Save the optimization results into the ```optimized_points_file``` file.  
+14. Show the optimization statistics.  
 
 
 ## Artificial generator:  
