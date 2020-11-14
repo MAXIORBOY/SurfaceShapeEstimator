@@ -35,7 +35,7 @@
 * ```optimized_points_file``` - (str) full name of the file which stores already optimized coordinates (xyz) of each point and some additional information. The file must be in ```.pickle``` format. After each optimization process a new ```.pickle``` file is generated, which saves the results. Passing a ```.pickle``` file as parameter skips the whole optimization process which saves time and allows to load previously calculated results. If a ```.pickle``` file is passed as the parameter, the value of the ```duplicate_data``` parameter is irrelevant, because that value is saved in the file. By default the results will be saved in the ```optimized.pickle``` file. The ```earth.pickle``` file is a valid example. Default = None.
 
 
-## Optimizer Algorithm:
+## Optimization Algorithm:
 1. Find a point with the largest number of connections.
 2. Create a set of unique points from ```connections_file```.  
 3. Place all of the points (from the set) at random on 3-D space. 
