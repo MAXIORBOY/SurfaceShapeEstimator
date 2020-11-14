@@ -68,7 +68,7 @@ For example:
   * 'LON' is a code of the London city.
 
 * Why did you use www.wego.com website?  
-This website allows to automatize a process of the web-scrapping. To collect travel time between two airports (...)   www.wego.com/schedules/XXX/YYY/  were XXX and YYY are IATA codes. (...)
+This website allows to automatize the process of the web-scrapping. To collect travel time between two airports, the script visited the site: www.wego.com/schedules/XXX/YYY/ (were XXX and YYY are IATA codes) and read a median of the available results.
 
 ## Project's origin:  
 It was a college project which I done by myself. After some time I created a GitHub account and I decided to add this project as a new repository. However I was not satisfied about a code quality and a visualization method, so I decided to "remaster" that project. I simplified and refactored all the code, changed visualization backend from ```matplotlib``` to ```plotly``` and added additional information about airports in Earth example.
