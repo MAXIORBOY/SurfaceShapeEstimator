@@ -38,9 +38,9 @@
 ## Optimization Algorithm:
 ### Optimization parameters:   
 * ```mod``` - (float) (...). Set to 0.5.  
-* ```iterations``` - (int) A maximum number of iterations. Set to 250.  
+* ```iterations``` - (int) a maximum number of iterations. Set to 250.  
 * ```tol``` - (float) a tolerance value. If the ```mod``` value falls below the ```tol``` value, the optimization process will stop. Set to 0.001.  
-* ```optimized_points_file_name``` - (str) A name of the ```.pickle``` file which will be created after the optimization. It will contain the optimized data. Set to 'optimized_points.pickle'  
+* ```optimized_points_file_name``` - (str) a name of the ```.pickle``` file which will be created after the optimization. It will contain the optimized data (and some additional information). Set to 'optimized_points.pickle'  
 
 ### Algorithm:  
 1. Find a point with the largest number of connections.
@@ -64,16 +64,16 @@
 (...), the script ```artificial_generator.py``` was created, which contains a class ```ArtificialGenerator```.  
 ```Artificial_generator.__init__(self, shape_name, points=500, part_of_all_connections=0.05, data_noise_parameter=0.0)```  
 
-* ```shape_name``` - (str) Specifies the shape of the surface. Must be one of the following: 'cube', 'sphere', 'disc', 'cylinder', 'line'  
+* ```shape_name``` - (str) specifies the shape of the surface. Must be one of the following: 'cube', 'sphere', 'disc', 'cylinder', 'line'  
 
-* ```points``` - (int) Number of points to be generated. It must be a number above or equal 250. Default = 500  
+* ```points``` - (int) number of points to be generated. It must be a number above or equal 250. Default = 500  
 
-* ```part_of_all_connections``` - (float) Number of all possible connections is expressed by the formula:  
+* ```part_of_all_connections``` - (float) number of all possible connections is expressed by the formula:  
   
    ```(points * (points - 1)) / 2```    
 This parameter specifies how large part of the whole we want to generate. It must be a value from the range <0.01; 1>, where 0.05 means 5% of the whole. Default = 0.05  
 
-* ```data_noise_parameter``` - (float) To simulate a real-world data collection, for each connection we can modify the calculated ```measurement_value``` by adding some noise into the data. The actual ```measurement_value``` is randomized by up to +/- (100 * ```data_noise_parameter```)% around the calculated ```measurement_value```. It must be a number from the range <0;1>. Default = 0.0
+* ```data_noise_parameter``` - (float) to simulate a real-world data collection, for each connection we can modify the calculated ```measurement_value``` by adding some noise into the data. The actual ```measurement_value``` is randomized by up to +/- (100 * ```data_noise_parameter```)% around the calculated ```measurement_value```. It must be a number from the range <0;1>. Default = 0.0
 
 
 ## Earth example:
@@ -83,7 +83,7 @@ In order to estimate a shape of the surface of Earth, at first 634 airports were
 Because we are going to use time measurements between points. In order to do that our routes have to be as straight as possible and roughly the same speed has to be maintained on all routes. Air flights sufficiently enough fulfill those conditions.
 
 * Why did airports were carefully selected? Couldn't we just use all of them?   
-Selected airports (...) There are two reasons. First we have to maintain the conditions. We need airports, on which large (roughly similar to each other) airplanes land. Second (...)
+Selected airports are in a significant majority the international airports. This type of the airports gives the biggest chances of fulfilling the previously mentioned conditions. First, large (roughly similar to each other) planes land on those airports. Second, this type of airports offers a large number of connections, which significantly improve the data quality. Of course in this data set, there are smaller, more local airports. They come from low population density areas such as: Oceania, southern part of the South America, north Canada or north Russia.
 
 * What is an IATA code?   
 An IATA (International Air Transport Association) code is a 3 letter geocode which designates airports and metropolitan areas (if a city has more than one airport)
