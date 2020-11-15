@@ -98,6 +98,7 @@ This parameter specifies how large part of the whole we want to generate. It mus
 ## Earth example:
 In order to estimate a shape of the surface of Earth, at first 634 airports were carefully selected from all around the globe. You can find them in the ```airports.csv``` file. Following this we have to create as many connections as possible from the collected airports. Those data were collected from the site www.wego.com/schedules/ with a help of a web-scrapping script. In total, 9432 (which is around 4.7% of all possible combinations of flights) connections were found and stored in the ```flights.csv``` file.
 
+### FAQ:  
 * Why airports?   
 Because we are going to use time measurements between points. In order to do that our routes have to be as straight as possible and roughly the same speed has to be maintained on all routes. Air flights sufficiently enough fulfill those conditions.
 
@@ -115,6 +116,11 @@ For example:
 * Why did you use www.wego.com website?  
 This website allows to automatize the process of the web-scrapping. To collect travel time between two airports, the script visited the site: www.wego.com/schedules/XXX/YYY/ (were XXX and YYY are IATA codes) and read a median of the available results.
 
+* I started the optimization process by myself, but the results are clearly different from those presented in the ```earth.pickle``` file. Why is that?  
+
+## Launch:  
+* To see the results calculated by the optimizer (from the ```ShapeEstimator``` class) launch the ```draw_plot``` method.  
+* To generate artificial data (from the ```ArtificialGenerator``` class) launch the ```generate_connections``` method.  
 
 ## Project's origin:  
 It was an university project which I done by myself. After some time I created a GitHub account and I decided to add this project as a new repository. However I was not satisfied about a code quality and a visualization method, so I decided to "remaster" that project. I simplified and refactored all the code, changed visualization backend from ```matplotlib``` to ```plotly``` and added additional information about airports in Earth example.
