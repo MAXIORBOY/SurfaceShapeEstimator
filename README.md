@@ -49,21 +49,21 @@
 4. Calculate errors (cumulative, average, max)
 5. i = 0.  
 6. Repeat if i < ```iterations```:  
- 6.1. Shuffle the data from the ```connections_file```.  
- 6.2. Make a copy of current points coordinates.  
- 6.3. Repeat for each connection in ```connections_file```:   
-  6.3.1. Calculate the current Euclidean distance between two points.    
-  6.3.2. Create a vector joining ```departure_point``` and ```arrival_point```.   
-  6.3.3. Choose which point will have its coordinates changed.  
-&nbsp;&emsp; * If both of the points are not the point with the largest number of connections, pick a point at random.  
-&nbsp;&emsp; * Else if one of the point is the point with the largest number of connections, always pick the other one.  
+6.1. Shuffle the data from the ```connections_file```.  
+6.2. Make a copy of current points coordinates.  
+6.3. Repeat for each connection in ```connections_file```:    
+&nbsp;&nbsp;&nbsp;6.3.1. Calculate the current Euclidean distance between two points.       
+&nbsp;&nbsp;&nbsp;6.3.2. Create a vector joining ```departure_point``` and ```arrival_point```.   
+&nbsp;&nbsp;&nbsp;6.3.3. Choose which point will have its coordinates changed.  
+&nbsp;&nbsp;&nbsp; * If both of the points are not the point with the largest number of connections, pick a point at random.  
+&nbsp;&nbsp;&nbsp; * Else if one of the point is the point with the largest number of connections, always pick the other one.  
 (...)   
- 6.4. Calculate errors (cumulative, average, max)  
- 6.5. If the current cumulative error is bigger than the previous one:   
-  6.5.1 Reduce the ```mod``` value by 5% and restore the previously saved points coordinates.   
-  6.5.2. If the ```mod``` value is below the ```tol``` value:    
-   6.5.2.1. Stop the optimization process.      
- 6.6. i += 1.   
+6.4. Calculate errors (cumulative, average, max)  
+6.5. If the current cumulative error is bigger than the previous one:   
+&nbsp;&nbsp;&nbsp;6.5.1 Reduce the ```mod``` value by 5% and restore the previously saved points coordinates.   
+&nbsp;&nbsp;&nbsp;6.5.2. If the ```mod``` value is below the ```tol``` value:    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.5.2.1. Stop the optimization process.      
+6.6. i += 1.   
 7. Save the optimization results into the ```optimized_points_file``` file.  
 8. Show the optimization statistics.  
 
