@@ -123,7 +123,7 @@ It is not the fault of the optimizer but the data itself. Collected number of fl
 * To generate artificial data (from the ```ArtificialGenerator``` class) launch the ```generate_connections``` method.  
 
 ## Project's origin:  
-It was an university project which I done by myself. After some time I created a GitHub account and I decided to add this project as a new repository. However I was not satisfied about a code quality and a visualization method, so I decided to "remaster" that project. I simplified and refactored all the code, changed visualization backend from ```matplotlib``` to ```plotly``` and added additional information about airports in Earth example.
+It was a university project which I done by myself. After some time I created a GitHub account and I decided to add this project as a new repository. However I was not satisfied about a code quality and a visualization method, so I decided to "remaster" that project. I simplified and refactored all the code, changed visualization backend from ```matplotlib``` to ```plotly``` and added additional information about airports in Earth example.
 
 
 ## Technology:   
