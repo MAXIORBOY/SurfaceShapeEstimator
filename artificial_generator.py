@@ -9,10 +9,10 @@ class ArtificialGenerator:
         self.points = points
         self.data_noise_parameter = data_noise_parameter
         self.points_dictionary = self.generate_shape_points()
-        self.flights = self.calculate_number_of_flights(part_of_all_connections)
+        self.connections = self.calculate_number_of_connections(part_of_all_connections)
         self.connections_matrix = self.create_connections_matrix()
 
-    def calculate_number_of_flights(self, part_of_all_connections):
+    def calculate_number_of_connections(self, part_of_all_connections):
         return int(part_of_all_connections * (self.points * (self.points - 1) / 2))
 
     def create_connections_matrix(self):
@@ -102,7 +102,7 @@ class ArtificialGenerator:
     def create_point_name_from_index(index):
         return f'P{index + 1}'
 
-    def choose_two_flight_points(self, override_point1_index=None):
+    def choose_two_points_to_make_connection(self, override_point1_index=None):
         available_points = [i for i in range(len(self.connections_matrix)) if any(self.connections_matrix[i])]
         if override_point1_index is None:
             point1 = random.choice(available_points)
@@ -120,7 +120,7 @@ class ArtificialGenerator:
     def data_noise(self):
         return 1 - self.generate_point_coord_from_the_given_range(-self.data_noise_parameter, self.data_noise_parameter)
 
-    def generate_flights(self):
+    def generate_connections(self):
         def create_new_row(p1, p2):
             return pd.DataFrame({'departure_point': [self.create_point_name_from_index(p1)],
                                  'arrival_point': [self.create_point_name_from_index(p2)],
@@ -129,13 +129,13 @@ class ArtificialGenerator:
         data = pd.DataFrame(columns=['departure_point', 'arrival_point', 'measurement_value'])
 
         for i in range(self.points):  # make sure that every point has at least one connection
-            point1, point2 = self.choose_two_flight_points(override_point1_index=i)
+            point1, point2 = self.choose_two_points_to_make_connection(override_point1_index=i)
             row = create_new_row(point1, point2)
             data = data.append(row, ignore_index=True)
 
-        for i in range(self.flights - self.points):
-            point1, point2 = self.choose_two_flight_points()
+        for i in range(self.connections - self.points):
+            point1, point2 = self.choose_two_points_to_make_connection()
             row = create_new_row(point1, point2)
             data = data.append(row, ignore_index=True)
 
-        data.to_csv('artificial_flights.csv', index=False)
+        data.to_csv('artificial_connections.csv', index=False)
