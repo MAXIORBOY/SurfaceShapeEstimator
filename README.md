@@ -117,6 +117,7 @@ For example:
 This website allows to automatize the process of the web-scrapping. To collect travel time between two airports, the script visited the site: www.wego.com/schedules/XXX/YYY/ (were XXX and YYY are IATA codes) and read a median of the available results.
 
 * I started the optimization process by myself, but the results are clearly different from those presented in the ```earth.pickle``` file. Why is that?  
+(...)   
 
 ## Launch:  
 * To see the results calculated by the optimizer (from the ```ShapeEstimator``` class) launch the ```draw_plot``` method.  
