@@ -44,7 +44,7 @@
 
 ### Algorithm:  
 1. Find a point with the largest number of connections.
-2. Create a set of unique points from ```connections_file```.  
+2. Create a set of unique points from the ```connections_file```.  
 3. Place all of the points (from the set) at random on 3-D space. 
 4. Calculate errors (cumulative, average, max)
 5. i = 0.  
@@ -59,7 +59,7 @@
 &nbsp;&nbsp;&nbsp; * Else if one of the point is the point with the largest number of connections, always pick the other one.   
 &nbsp;&nbsp;&nbsp;6.3.4. If the calculated distance between points is longer than the expected one:   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.1. If the first point was chosen in step 6.3.3:   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.1.1. Modify point's coordinates (x, y, z) by adding to the coordinates: ```mod``` * calculated vector (from the step 6.3.2)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.1.1. Modify point's coordinates (x, y, z) by adding to the coordinates: ```mod``` * calculated vector (from the step 6.3.2)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.2. If the second point was chosen in step 6.3.3:    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.2.1. Modify point's coordinates (x, y, z) by adding to the coordinates: -```mod``` * calculated vector (from the step 6.3.2)  
 &nbsp;&nbsp;&nbsp;6.3.5. If the calculated distance between points is shorter than the expected one:    
