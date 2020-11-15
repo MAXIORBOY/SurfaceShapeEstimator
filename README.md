@@ -57,10 +57,15 @@
 &nbsp;&emsp;12. Choose which point will have its coordinates changed.  
 &nbsp;&emsp; * If both of the points are not the point with the largest number of connections, pick a point at random.  
 &nbsp;&emsp; * Else if one of the point is the point with the largest number of connections, always pick the other one.  
-(...)  
-&nbsp;13. i += 1.   
-14. Save the optimization results into the ```optimized_points_file``` file.  
-15. Show the optimization statistics.  
+(...)   
+&nbsp;13. Calculate errors.  
+&nbsp;14. If the current cumulative error is bigger than the previous one:   
+&nbsp;&emsp;14.1 Reduce the ```mod``` value by 5% and restore the previously saved points coordinates.   
+&nbsp;&emsp;14.2. If the ```mod``` value is below the ```tol``` value:    
+&nbsp;&emsp;&emsp;14.2.1. Stop the optimization process.      
+&nbsp;15. i += 1.   
+16. Save the optimization results into the ```optimized_points_file``` file.  
+17. Show the optimization statistics.  
 
 
 ## Artificial generator:  
