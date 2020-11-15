@@ -54,14 +54,17 @@
 &nbsp;9. Repeat for each connection in ```connections_file```:   
 &nbsp;&emsp;10. Calculate the current Euclidean distance between two points.    
 &nbsp;&emsp;11. Create a vector joining ```departure_point``` and ```arrival_point```.   
+&nbsp;&emsp;12. Choose which point will have its coordinates changed.  
+&nbsp;&emsp; * If both of the points are not the point with the largest number of connections, pick a point at random.  
+&nbsp;&emsp; * Else if one of the point is the point with the largest number of connections, always pick the other one.  
 (...)  
-&nbsp;12. i += 1.   
-13. Save the optimization results into the ```optimized_points_file``` file.  
-14. Show the optimization statistics.  
+&nbsp;13. i += 1.   
+14. Save the optimization results into the ```optimized_points_file``` file.  
+15. Show the optimization statistics.  
 
 
 ## Artificial generator:  
-(...), the script ```artificial_generator.py``` was created, which contains a class ```ArtificialGenerator```.  
+In order to test the ```ShapeEstimator``` class, a new script ```artificial_generator.py``` was created, which contains a class ```ArtificialGenerator```. The purpose of this class is to see what ```ShapeEstimator``` will estimate when we know, which surface shape shall be expected, based on amount and quality of data we will provide.  
 ```Artificial_generator.__init__(self, shape_name, points=500, part_of_all_connections=0.05, data_noise_parameter=0.0)```  
 
 * ```shape_name``` - (str) specifies the shape of the surface. Must be one of the following: 'cube', 'sphere', 'disc', 'cylinder', 'line'  
