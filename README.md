@@ -36,6 +36,8 @@
 
 
 ## Optimization Algorithm:
+Keep in mind that the optimization process may take up to several minutes, depending on how many connections the ```connection_file``` contains.  
+
 ### Optimization parameters:   
 * ```mod``` - (float) (...). Set to 0.5.  
 * ```iterations``` - (int) a maximum number of iterations. Set to 250.  
