@@ -56,11 +56,20 @@
 &nbsp;&nbsp;&nbsp;6.3.2. Create a vector joining ```departure_point``` and ```arrival_point```.   
 &nbsp;&nbsp;&nbsp;6.3.3. Choose which point will have its coordinates changed.  
 &nbsp;&nbsp;&nbsp; * If both of the points are not the point with the largest number of connections, pick a point at random.  
-&nbsp;&nbsp;&nbsp; * Else if one of the point is the point with the largest number of connections, always pick the other one.  
-(...)   
+&nbsp;&nbsp;&nbsp; * Else if one of the point is the point with the largest number of connections, always pick the other one.   
+&nbsp;&nbsp;&nbsp;6.3.4. If the calculated distance between points is longer than the expected one:   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.1. If the first point was chosen in step 6.3.3:   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.1.1. Modify point's coordinates (x, y, z) by adding into the coordinates: ```mod``` * calculated vector (from the step 6.3.2)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.2. If the second point was chosen in step 6.3.3:    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.2.1. Modify point's coordinates (x, y, z) by substracting into the coordinates: ```mod``` * calculated vector (from the step 6.3.2)  
+&nbsp;&nbsp;&nbsp;6.3.5. If the calculated distance between points is shorter than the expected one:    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.5.1. If the first point was chosen in step 6.3.3:   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.5.1.1. Modify point's coordinates (x, y, z) by substracting into the coordinates: ```mod``` * calculated vector (from the step 6.3.2)    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.5.2. If the second point was chosen in step 6.3.3:    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.5.2.1. Modify point's coordinates (x, y, z) by adding into the coordinates: ```mod``` * calculated vector (from the step 6.3.2)      
 6.4. Calculate errors (cumulative, average, max)  
 6.5. If the current cumulative error is bigger than the previous one:   
-&nbsp;&nbsp;&nbsp;6.5.1 Reduce the ```mod``` value by 5% and restore the previously saved points coordinates.   
+&nbsp;&nbsp;&nbsp;6.5.1. Reduce the ```mod``` value by 5% and restore the previously saved points coordinates (from the step 6.2).   
 &nbsp;&nbsp;&nbsp;6.5.2. If the ```mod``` value is below the ```tol``` value:    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.5.2.1. Stop the optimization process.      
 6.6. i += 1.   
