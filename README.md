@@ -59,14 +59,14 @@
 &nbsp;&nbsp;&nbsp; * Else if one of the point is the point with the largest number of connections, always pick the other one.   
 &nbsp;&nbsp;&nbsp;6.3.4. If the calculated distance between points is longer than the expected one:   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.1. If the first point was chosen in step 6.3.3:   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.1.1. Modify point's coordinates (x, y, z) by adding into the coordinates: ```mod``` * calculated vector (from the step 6.3.2)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.1.1. Modify point's coordinates (x, y, z) by adding to the coordinates: ```mod``` * calculated vector (from the step 6.3.2)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.2. If the second point was chosen in step 6.3.3:    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.2.1. Modify point's coordinates (x, y, z) by substracting into the coordinates: ```mod``` * calculated vector (from the step 6.3.2)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.4.2.1. Modify point's coordinates (x, y, z) by adding to the coordinates: -```mod``` * calculated vector (from the step 6.3.2)  
 &nbsp;&nbsp;&nbsp;6.3.5. If the calculated distance between points is shorter than the expected one:    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.5.1. If the first point was chosen in step 6.3.3:   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.5.1.1. Modify point's coordinates (x, y, z) by substracting into the coordinates: ```mod``` * calculated vector (from the step 6.3.2)    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.5.1.1. Modify point's coordinates (x, y, z) by adding to the coordinates: -```mod``` * calculated vector (from the step 6.3.2)    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.5.2. If the second point was chosen in step 6.3.3:    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.5.2.1. Modify point's coordinates (x, y, z) by adding into the coordinates: ```mod``` * calculated vector (from the step 6.3.2)      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3.5.2.1. Modify point's coordinates (x, y, z) by adding to the coordinates: ```mod``` * calculated vector (from the step 6.3.2)      
 6.4. Calculate errors (cumulative, average, max)  
 6.5. If the current cumulative error is bigger than the previous one:   
 &nbsp;&nbsp;&nbsp;6.5.1. Reduce the ```mod``` value by 5% and restore the previously saved points coordinates (from the step 6.2).   
