@@ -71,7 +71,7 @@
 6.5. If the current cumulative error is bigger than the previous one:   
 &nbsp;&nbsp;&nbsp;6.5.1. Reduce the ```mod``` value by 5% and restore the previously saved points coordinates (from the step 6.2).   
 &nbsp;&nbsp;&nbsp;6.5.2. If the ```mod``` value is below the ```tol``` value:    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.5.2.1. Stop the optimization process.      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.5.2.1. Stop the optimization process (Skip to the point 7).     
 6.6. i += 1.   
 7. Save the optimization results into the ```optimized_points_file``` file.  
 8. Show the optimization statistics.  
