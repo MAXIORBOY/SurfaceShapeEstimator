@@ -1,6 +1,6 @@
-# Surface Shape Estimator is a program which allows to estimate a shape of the surface based solely on a collection of connections between two points on that surface. Data about a single connection store 3 information: code names of a first and second point and Euclidean distance OR travel time between those points.
+# Surface Shape Estimator is a program which allows to estimate a shape of the surface based solely on a collection of connections between two points on that surface. Data about a single connection store 3 information: code names of a first and second point and an Euclidean distance or a travel time between those points.
 
-> :warning: **If you use a travel time as a measurement**: You have to make sure that the same speed was maintained during all travels and that the connection lines are straight.  
+> :warning: **If you use a travel time as a measurement**: You have to make sure that the same speed was maintained during all measurements and that the connection lines were straight.  
 
 ## Menu:
 * [Implementation](#implementation)
