@@ -5,13 +5,13 @@
 ## Menu:
 * [Implementation](#implementation)
 * [Optimization Algorithm](#optimization-algorithm)
- * [Optimization parameters](#optimization-parameters)
- * [Algorithm](#algorithm)
+   * [Optimization parameters](#optimization-parameters)
+   * [Algorithm](#algorithm)
 * [Artificial generator](#artificial-generator)
 * [Earth example](#earth-example)
- * [FAQ](#faq)
+   * [FAQ](#faq)
 * [Launch](#launch)
-* [Project's origin](#project's-origin)
+* [Project's origin](#projects-origin)
 * [Technology](#technology)
 
 
