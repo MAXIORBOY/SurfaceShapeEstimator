@@ -2,6 +2,18 @@
 
 > :warning: **If you use a travel time as a measurement**: You have to make sure that the same speed was maintained during all travels and that the connection lines are straight.  
 
+## Menu:
+* [Implementation](#implementation)
+* [Optimization Algorithm](#optimization-algorithm)
+ * [Optimization parameters](#optimization-parameters)
+ * [Algorithm](#algorithm)
+* [Artificial generator](#artificial-generator)
+* [Earth example](#earth-example)
+* [FAQ](#faq)
+* [Launch](#launch)
+* [Project's origin](#project's-origin)
+* [Technology](#technology)
+
 
 ## Implementation:  
  To solve this problem, the script ```main.py``` was created, which contains a class ```ShapeEstimator```.    
@@ -34,7 +46,7 @@
 * ```optimized_points_file``` - (str) full name of the file which stores already optimized coordinates (xyz) of each point and some additional information. The file must be in ```.pickle``` format. After each optimization process a new ```.pickle``` file is generated, which saves the results. Passing a ```.pickle``` file as a parameter skips the whole optimization process which saves time and allows to load previously calculated results. If a ```.pickle``` file is passed as the parameter, the value of the ```duplicate_data``` parameter is irrelevant, because that value is saved in the file. By default the results will be saved in the ```optimized.pickle``` file. The ```earth.pickle``` file is a valid example. Default = None.
 
 
-## Optimization Algorithm:
+## Optimization algorithm:
 Keep in mind that the optimization process may take up to several minutes, depending on how many connections the ```connection_file``` contains.  
 
 ### Optimization parameters:   
@@ -97,7 +109,7 @@ This parameter specifies how large part of the whole we want to generate. It mus
 ## Earth example:
 In order to estimate a shape of the surface of Earth, at first 634 airports were carefully selected from all around the globe. You can find them in the ```airports.csv``` file. Following this we have to create as many connections as possible from the collected airports. Those data were collected from the site www.wego.com/schedules/ with a help of a web-scrapping script. In total, 9432 (which is around 4.7% of all possible combinations of flights) connections were found and stored in the ```flights.csv``` file. If you want to see the results, include the files: ```flights.csv```, ```airports.csv```, ```color_definitions.csv``` and ```earth.pickle``` as the ```ShapeEstimator``` class parameters.  
 
-### FAQ:  
+## FAQ:  
 * Why airports?   
 Because we are going to use time measurements between points. In order to do that our routes have to be as straight as possible and roughly the same speed has to be maintained on all routes. Air flights sufficiently enough fulfill those conditions.
 
