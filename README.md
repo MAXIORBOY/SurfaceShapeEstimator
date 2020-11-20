@@ -4,7 +4,7 @@
 
 ## Menu:
 * [Implementation](#implementation)
-* [Optimization Algorithm](#optimization-algorithm)
+* [Optimization algorithm](#optimization-algorithm)
    * [Optimization parameters](#optimization-parameters)
    * [Algorithm](#algorithm)
 * [Artificial generator](#artificial-generator)
@@ -13,7 +13,6 @@
 * [Launch](#launch)
 * [Project's origin](#projects-origin)
 * [Technology](#technology)
-
 
 ## Implementation:  
  To solve this problem, the script ```main.py``` was created, which contains a class ```ShapeEstimator```.    
