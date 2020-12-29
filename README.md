@@ -52,7 +52,7 @@ Keep in mind that the optimization process may take up to several minutes, depen
 * ```mod``` - (float) a modifier, which regulates by how much the points coordinates may be adjusted. Set to 0.5.  
 * ```iterations``` - (int) a maximum number of iterations. Set to 250.  
 * ```tol``` - (float) a tolerance value. If the ```mod``` value falls below the ```tol``` value, the optimization process will stop. Set to 0.001.  
-* ```optimized_points_file_name``` - (str) a name of the ```.pickle``` file which will be created after the optimization. It will contain the optimized data (and some additional information). Set to 'optimized_points.pickle'  
+* ```optimized_points_file_name``` - (str) a name of the ```.pickle``` file which will be created after the optimization. It will contain the optimized data (and some additional information). Set to ```optimized_points.pickle```.
 
 ### Algorithm:  
 1. Find a point with the largest number of connections.
