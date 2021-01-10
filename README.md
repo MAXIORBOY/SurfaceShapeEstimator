@@ -124,7 +124,7 @@ For example:
   * 'LON' is a code of the London city.
 
 * Why did you use www.wego.com website?  
-This website allows to automatize the process of the web-scrapping. To collect travel time between two airports, the script visited the site: www.wego.com/schedules/XXX/YYY/ (were XXX and YYY are IATA codes) and read a median of the available results.
+This website allows to automatize the process of the web-scrapping. To collect travel time between two airports, the script visited the site: www.wego.com/schedules/XXX/YYY/ (where XXX and YYY are IATA codes) and read a median of the available results.
 
 * I started the optimization process by myself, but the results are clearly different from those presented in the ```earth.pickle``` file. Why is that?  
 It is not the fault of the optimizer but the data itself. Collected number of flights (9432) may seem adequate, but in the reality it is just passable. There is a considerable number of points with a very low number of connections (3+), which leads to an ambiguity (especially in the Oceania). Don't forget, that we're dealing with real data, so there is some level of noise. According to my tests, the "proper" result generates itself in around 40% of cases, with the ```duplicate_data``` parameter set to True. The data in the ```earth.pickle``` file are one of those cases, which almost perfectly represents the surface of Earth.
