@@ -13,6 +13,7 @@
 * [Launch](#launch)
 * [Project's origin](#projects-origin)
 * [Technology](#technology)
+* [Presentation](#presentation)
 
 ## Implementation:  
  To solve this problem, the script ```main.py``` was created, which contains a class ```ShapeEstimator```.    
@@ -144,4 +145,12 @@ It was a university project which I done by myself. After some time I created a 
 * ```plotly``` 4.12.0
 
 ## Presentation:
+Legend:
+* North America - dark blue
+* Africa - orange
+* South America - lime
+* Europe - purple
+* Asia - red
+* Australia / Oceania - cyan
+
 ![earth](https://user-images.githubusercontent.com/71539614/104878985-3d49a800-595d-11eb-8b86-b270e4878696.gif)
