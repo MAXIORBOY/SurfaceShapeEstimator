@@ -145,6 +145,8 @@ It was a university project which I done by myself. After some time I created a 
 * ```plotly``` 4.12.0
 
 ## Presentation:
+Visual presentation of the data from the ```earth.pickle``` file.
+
 Legend:
 * North America - dark blue
 * Africa - orange
