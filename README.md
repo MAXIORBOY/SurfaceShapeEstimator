@@ -142,3 +142,6 @@ It was a university project which I done by myself. After some time I created a 
 * ```numpy``` 1.19.4  
 * ```pandas``` 1.1.4 
 * ```plotly``` 4.12.0
+
+## Presentation:
+![earth](https://user-images.githubusercontent.com/71539614/104878985-3d49a800-595d-11eb-8b86-b270e4878696.gif)
