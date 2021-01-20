@@ -29,7 +29,7 @@
 * ```duplicate_data``` - (bool) duplicate the data from the ```connections_file```. Duplicating the data usually yields better results, especially if you have many points with not many connections and / or you have a low amount of connections overall. Duplicating the data causes a considerable increase of an optimization time. Duplication of data shall be discouraged if your collection of connections does not meet the previously mentioned situations. Default = False  
 
 
-* ```point_details_file_name``` - (str) full name of the file which stores additional information about points. The file must be in ```.csv``` format. The file may have any number of columns, but must have a column ```point``` which is a point codename from the ```connections file```.  The ```airports.csv``` file is a valid example. Default = None
+* ```point_details_file_name``` - (str) full name of the file which stores additional pieces of information about points. The file must be in ```.csv``` format. The file may have any number of columns, but must have a column ```point``` which is a point codename from the ```connections file```.  The ```airports.csv``` file is a valid example. Default = None
 
   ```point_details_file``` header:  
   point | <column_name 1> | ... | <column_name n>
@@ -43,7 +43,7 @@
   ---------------------------------------|-------  
 <br>
 
-* ```optimized_points_file``` - (str) full name of the file which stores already optimized coordinates (xyz) of each point and some additional information. The file must be in ```.pickle``` format. After each optimization process a new ```.pickle``` file is generated, which saves the results. Passing a ```.pickle``` file as a parameter skips the whole optimization process which saves time and allows to load previously calculated results. If a ```.pickle``` file is passed as the parameter, the value of the ```duplicate_data``` parameter is irrelevant, because that value is saved in the file. By default the results will be saved in the ```optimized.pickle``` file. The ```earth.pickle``` file is a valid example. Default = None.
+* ```optimized_points_file``` - (str) full name of the file which stores already optimized coordinates (xyz) of each point and some additional pieces of information. The file must be in ```.pickle``` format. After each optimization process a new ```.pickle``` file is generated, which saves the results. Passing a ```.pickle``` file as a parameter skips the whole optimization process which saves time and allows to load previously calculated results. If a ```.pickle``` file is passed as the parameter, the value of the ```duplicate_data``` parameter is irrelevant, because that value is saved in the file. By default the results (of the optimization process) will be saved in the ```optimized.pickle``` file. The ```earth.pickle``` file is a valid example. Default = None.
 
 
 ## Optimization algorithm:
