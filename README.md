@@ -114,7 +114,7 @@ In order to estimate a shape of the surface of Earth, at first 634 airports were
 Because we are going to use time measurements between points. In order to do that our routes have to be as straight as possible and roughly the same speed has to be maintained on all routes. Air flights sufficiently enough fulfill those conditions.
 
 * Why did airports were carefully selected? Couldn't we just use all of them?   
-Selected airports are in a significant majority the international airports. This type of the airports gives the biggest chances of fulfilling the previously mentioned conditions. First, large (roughly similar to each other) planes land on those airports. Second, this type of airports offers a large number of connections, which significantly improves the data quality. Of course in this data set, there are smaller, more local airports. They come from low population density areas such as: Oceania, southern part of the South America, north Canada or north Russia.
+Selected airports are in a significant majority the international airports. This type of the airports gives the biggest chances of fulfilling the previously mentioned conditions. First, large (roughly similar to each other) planes land on those airports. Second, this type of airports offers a large number of connections, which significantly improves the data quality. Of course in this data set, there are smaller, more local airports. They come from a low population density areas such as: Oceania, southern part of the South America, north Canada or north Russia.
 
 * What is an IATA code?   
 An IATA (International Air Transport Association) code is a 3 letter geocode which designates airports and metropolitan areas (if a city has more than one airport)
@@ -125,7 +125,7 @@ For example:
   * 'LON' is a code of the London city.
 
 * Why did you use www.wego.com website?  
-This website allows to automatize the process of the web-scrapping. To collect travel time between two airports, the script visited the site: www.wego.com/schedules/XXX/YYY/ (where XXX and YYY are IATA codes) and read a median of the available results.
+This website allows to automatize the process of the web-scrapping. In order to collect a travel time between two airports, the script visited the site: www.wego.com/schedules/XXX/YYY/ (where XXX and YYY are IATA codes) and read a median of available results.
 
 * I started the optimization process by myself, but the results are clearly different from those presented in the ```earth.pickle``` file. Why is that?  
 It is not the fault of the optimizer but the data itself. Collected number of flights (9432) may seem adequate, but in the reality it is just passable. There is a considerable number of points with a very low number of connections (3+), which leads to an ambiguity (especially in the Oceania). Don't forget, that we're dealing with real data, so there is some level of noise. According to my tests, the "proper" result generates itself in around 40% of cases, with the ```duplicate_data``` parameter set to True. The data in the ```earth.pickle``` file are one of those cases, which almost perfectly represents the surface of Earth.
